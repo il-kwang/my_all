@@ -1,0 +1,1 @@
+print("Mary's cosmetics") # '를 출력하려면 ' 사이에 "로 닫아주면 된다다"
