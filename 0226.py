@@ -88,7 +88,7 @@ class Person:
 a = Person("ss",2321)
 a.greet()
 
-'''
+
 
 num1 = 3
 num2 = '2'
@@ -110,3 +110,5 @@ else:
     print('정상 동작했습니다.')
 finally:
     print('수행 종료')
+
+    '''

@@ -236,9 +236,364 @@ N을 입력받은 뒤, 구구단 N단을 출력하는 프로그램을 작성하�
 
 출력
 출력형식과 같게 N*1부터 N*9까지 출력한다.
-'''
 
 n = int(input())
 
 for x in range(1,10,1):
     print(f"{n} * {x} =",n*x)
+    '''
+
+#10950
+'''문제
+두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+
+입력
+첫째 줄에 테스트 케이스의 개수 T가 주어진다.
+
+각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+
+출력
+각 테스트 케이스마다 A+B를 출력한다.
+
+t = int(input())
+
+for n in range(0,t,1):
+    a,b = map(int,input().split())
+    print(a+b)
+'''
+
+#8393
+'''
+문제
+n이 주어졌을 때, 1부터 n까지 합을 구하는 프로그램을 작성하시오.
+
+입력
+첫째 줄에 n (1 ≤ n ≤ 10,000)이 주어진다.
+
+출력
+1부터 n까지 합을 출력한다.
+
+
+n = int(input())
+result = 0
+for x in range(1,n+1,1):
+    result += x  # 1 + 2 + 3 + 4 + 5''n
+
+print(result)
+
+'''
+
+#25304
+'''
+문제
+준원이는 저번 주에 살면서 처음으로 코스트코를 가 봤다. 정말 멋졌다. 
+그런데, 몇 개 담지도 않았는데 수상하게 높은 금액이 나오는 것이다! 
+준원이는 영수증을 보면서 정확하게 계산된 것이 맞는지 확인해보려 한다.
+
+영수증에 적힌,
+
+구매한 각 물건의 가격과 개수
+구매한 물건들의 총 금액
+을 보고, 구매한 물건의 가격과 개수로 계산한 총 금액이 영수증에 적힌 총 금액과 일치하는지 검사해보자.
+입력
+첫째 줄에는 영수증에 적힌 총 금액 
+$X$가 주어진다.
+둘째 줄에는 영수증에 적힌 구매한 물건의 종류의 수 
+$N$이 주어진다.
+이후 
+$N$개의 줄에는 각 물건의 가격 
+$a$와 개수 
+$b$가 공백을 사이에 두고 주어진다.
+
+출력
+구매한 물건의 가격과 개수로 계산한 총 금액이 영수증에 적힌 총 금액과 일치하면 Yes를 출력한다. 
+일치하지 않는다면 No를 출력한다.
+
+
+# 총 금액   -->(물건의 종류 수 만큼 반복)  - (물건 가격격 * 갯수)'' = 0  일때 Yes   0이 아닐 때 No
+
+pull_price = int(input())  
+object_num = int(input())
+
+for x in range(0,object_num,1):
+    object_price, num = map(int,input().split())
+    a = object_price*num
+    pull_price -= a
+
+if pull_price == 0:
+    print('Yes')
+else:
+    print('No')
+    '''
+
+#25314
+'''오늘은 혜아의 면접 날이다. 면접 준비를 열심히 해서 앞선 질문들을 잘 대답한 혜아는 이제 마지막으로 칠판에 직접 코딩하는 문제를 받았다. 
+혜아가 받은 문제는 두 수를 더하는 문제였다. C++ 책을 열심히 읽었던 혜아는 간단히 두 수를 더하는 코드를 칠판에 적었다. 
+코드를 본 면접관은 다음 질문을 했다. “만약, 입출력이 
+$N$바이트 크기의 정수라면 프로그램을 어떻게 구현해야 할까요?”
+
+혜아는 책에 있는 정수 자료형과 관련된 내용을 기억해 냈다. 책에는 long int는 
+$4$바이트 정수까지 저장할 수 있는 정수 자료형이고 long long int는 
+$8$바이트 정수까지 저장할 수 있는 정수 자료형이라고 적혀 있었다. 혜아는 이런 생각이 들었다. “int 앞에 long을 하나씩 더 붙일 때마다 
+$4$바이트씩 저장할 수 있는 공간이 늘어나는 걸까? 분명 long long long int는 
+$12$바이트, long long long long int는 
+$16$바이트까지 저장할 수 있는 정수 자료형일 거야!” 그렇게 혜아는 당황하는 면접관의 얼굴을 뒤로한 채 칠판에 정수 자료형을 써 내려가기 시작했다.
+
+혜아가 
+$N$바이트 정수까지 저장할 수 있다고 생각해서 칠판에 쓴 정수 자료형의 이름은 무엇일까?
+
+입력
+첫 번째 줄에는 문제의 정수 
+$N$이 주어진다. 
+$(4\le N\le 1\, 000$; 
+$N$은 
+$4$의 배수
+$)$ 
+
+출력
+혜아가 
+$N$바이트 정수까지 저장할 수 있다고 생각하는 정수 자료형의 이름을 출력하여라.
+
+
+Num = int(input())
+N = int(Num/4)
+long_size = []
+
+for x in range(0,N,1):
+    long_size.append('long')
+
+
+long_size.append('int') #마지막에 한 번만 int를 붙여준다다
+print(' '.join(long_size))# 출력하기 전에 join함수로 문자열을 합쳐준다.
+'''
+
+#15552
+'''
+빠른 A+B 성공
+
+문제
+본격적으로 for문 문제를 풀기 전에 주의해야 할 점이 있다. 입출력 방식이 느리면 여러 줄을 입력받거나 출력할 때 시간초과가 날 수 있다는 점이다.
+
+C++을 사용하고 있고 cin/cout을 사용하고자 한다면, cin.tie(NULL)과 sync_with_stdio(false)를 둘 다 적용해 주고, endl 대신 개행문자(\n)를 쓰자. 단, 이렇게 하면 더 이상 scanf/printf/puts/getchar/putchar 등 C의 입출력 방식을 사용하면 안 된다.
+
+Java를 사용하고 있다면, Scanner와 System.out.println 대신 BufferedReader와 BufferedWriter를 사용할 수 있다. BufferedWriter.flush는 맨 마지막에 한 번만 하면 된다.
+
+Python을 사용하고 있다면, input 대신 sys.stdin.readline을 사용할 수 있다. 
+단, 이때는 맨 끝의 개행문자까지 같이 입력받기 때문에 문자열을 저장하고 싶을 경우 .rstrip()을 추가로 해 주는 것이 좋다.
+
+또한 입력과 출력 스트림은 별개이므로, 테스트케이스를 전부 입력받아서 저장한 뒤 전부 출력할 필요는 없다. 테스트케이스를 하나 받은 뒤 하나 출력해도 된다.
+
+자세한 설명 및 다른 언어의 경우는 이 글에 설명되어 있다.
+
+이 블로그 글에서 BOJ의 기타 여러 가지 팁을 볼 수 있다.
+
+입력
+첫 줄에 테스트케이스의 개수 T가 주어진다. T는 최대 1,000,000이다. 다음 T줄에는 각각 두 정수 A와 B가 주어진다. A와 B는 1 이상, 1,000 이하이다.
+
+출력
+각 테스트케이스마다 A+B를 한 줄에 하나씩 순서대로 출력한다.
+
+import sys
+
+T = int(input())
+
+for x in range(0,T,1):
+    a, b = map(int,sys.stdin.readline().split())
+    print(a+b)
+    '''
+''' 
+
+#11021
+A+B - 7 
+문제
+두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+
+입력
+첫째 줄에 테스트 케이스의 개수 T가 주어진다.
+
+각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+
+출력
+각 테스트 케이스마다 "Case #x: "를 출력한 다음, A+B를 출력한다. 테스트 케이스 번호는 1부터 시작한다.
+import sys
+T = int(input())
+
+for x in range(0,T,1):
+    a, b = map(int,sys.stdin.readline().split())
+    print(f'Case #{x+1}:',a+b)
+    ''' 
+#11022
+#A+B - 8
+'''
+import sys
+T = int(input())
+
+for x in range(0,T,1):
+    a, b = map(int,sys.stdin.readline().split())
+    print(f'Case #{x+1}: {a} + {b} =',a+b)
+
+N = int(input())
+
+for x in range(N):
+    print('*'*(x+1))
+    '''
+#2439
+'''
+별 찍기 - 2 성공
+시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
+1 초	128 MB	368140	205698	172772	56.036%
+문제
+첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
+
+하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
+
+입력
+첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
+
+출력
+첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
+
+
+N = int(input())
+
+for i in range(N):
+    a = ('*'*(i+1)) 
+    b = a.rjust(N)
+    print(b)
+
+while True:
+    a,b = map(int,input().split())
+    if a == 0 and b == 0:
+        break
+    else:
+        print(a+b)
+'''
+# 10951
+'''
+문제
+두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+
+입력
+입력은 여러 개의 테스트 케이스로 이루어져 있다.
+
+각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+
+출력
+각 테스트 케이스마다 A+B를 출력한다.
+import sys
+
+for i in sys.stdin:
+    a,b=map(int, i.split())
+    print(a+b)
+
+    '''
+
+# 개수 세기
+'''
+
+문제
+총 N개의 정수가 주어졌을 때, 정수 v가 몇 개인지 구하는 프로그램을 작성하시오.
+
+입력
+첫째 줄에 정수의 개수 N(1 ≤ N ≤ 100)이 주어진다. 둘째 줄에는 정수가 공백으로 구분되어져있다. 셋째 줄에는 찾으려고 하는 정수 v가 주어진다. 입력으로 주어지는 정수와 v는 -100보다 크거나 같으며, 100보다 작거나 같다.
+
+출력
+첫째 줄에 입력으로 주어진 N개의 정수 중에 v가 몇 개인지 출력한다.
+
+N = int(input()) # 몇번 반복할 지.
+list_a = list(map(int,input().split())) #한줄로 받아온거 저장해 
+v = int(input()) #찾을 번호 
+print(list_a.count(v)) #몇개 있는지 찾기
+'''
+
+#X보다 작은 수 성공
+'''
+시간 제한	메모리 제한	제출	정답	맞힌 사람	정답 비율
+1 초	256 MB	359858	197052	158174	54.297%
+문제
+정수 N개로 이루어진 수열 A와 정수 X가 주어진다. 이때, A에서 X보다 작은 수를 모두 출력하는 프로그램을 작성하시오.
+
+입력
+첫째 줄에 N과 X가 주어진다. (1 ≤ N, X ≤ 10,000)
+
+둘째 줄에 수열 A를 이루는 정수 N개가 주어진다. 주어지는 정수는 모두 1보다 크거나 같고, 10,000보다 작거나 같은 정수이다.
+
+출력
+X보다 작은 수를 입력받은 순서대로 공백으로 구분해 출력한다. X보다 작은 수는 적어도 하나 존재한다.
+'''
+## 10871
+'''
+N, X = map(int,input().split())
+A = list(map(int,input().split()))
+
+for x in range(N):
+    if A[x] < X:
+        print(A[x],end= ' ')
+'''       
+
+#10818
+'''
+N = int(input())
+A = list(map(int,input().split()))
+
+print(min(A),max(A))
+
+'''
+#2562
+'''
+A = []
+for i in range(9):
+    A.append(int(input()))
+
+print(max(A))
+print(A.index(max(A))+1)'''
+
+#10810 공 넣기 
+'''
+N,M = map(int,input().split()) # 바구니의 수 , 공 넣기 횟수
+
+box = ['0'] *N #빈 바구니를 구현현
+for x in range(M):
+    i,j,k = map(int,input().split())
+    for x in range(i-1,j):
+        box[x]= str(k)
+print(' '.join(box))
+'''
+
+#10813 공 바꾸기
+
+'''
+N,M = map(int,input().split()) # 바구니의 수 , 공 교환 횟수
+box = ['0'] * N
+for x in range(N):
+    box[x] = x+1
+
+
+for x in range(M):
+    i, j = map(int,input().split())
+    box[i-1] , box[j-1] = box[j-1],box[i-1] #list swap 
+
+print(' '.join(map(str,box)))
+'''
+#5597
+'''
+num = []
+for i in range(30):
+    num.append(i+1)
+
+for x in range(28):
+    num.remove(int(input()))
+print('\n'.join(map(str,num)))
+'''
+
+#3052
+
+B = 42 
+num_list = []
+for x in range(10):
+    A = int(input())
+    num_list.append(A%B)
+print(num_list) 
+
+for x in range(10):
+    
