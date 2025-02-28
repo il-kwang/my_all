@@ -587,13 +587,151 @@ print('\n'.join(map(str,num)))
 '''
 
 #3052
-
-B = 42 
+'''
+B = 42
 num_list = []
 for x in range(10):
     A = int(input())
     num_list.append(A%B)
-print(num_list) 
 
-for x in range(10):
+set_num = set(num_list)
+
+#set_num.remove(0)
+print(len(set_num))
+#for x in range(10):
     
+'''
+# box = [i for i in range(1,n+1)] #n을 입력 받아 원소를 리스트에 채워 넣음 1~n+1 까지
+'''
+N,M = map(int,input().split())
+box = []
+
+
+#print(f'바구니의 수 : {N} swap count :{M}')
+
+for x in range(N):
+    box.append(x+1)
+
+#print(f'박스 리스트 : ',box)
+
+
+
+for k in range(M):
+    i,j = map(int,input().split())
+    revers_box = box[i-1:j]
+    revers_box.reverse()
+    box[i-1:j] = revers_box
+    #print(box)
+
+print(*box) #리스트 쉼표 및 대괄호없이 출력.
+'''
+
+
+
+'''
+N = int(input())
+score = list(map(int,input().split()))
+#print(score)
+max_score = max(score)
+
+
+for x in range(N):
+    score[x] = score[x]/max_score*100
+average = sum(score) / N
+
+
+print(average)
+'''
+
+#27866
+'''
+S = input()
+i = int(input())
+
+print(S[i-1])'''
+
+#2743
+'''S = input()
+print(len(S))'''
+
+#9086
+'''N = int(input())
+string_grupe = []
+
+for x in range(N):
+    a = input() # 문자열로 먼저 입력 받기 : 문자열로 먼저 받아서 첫글자 마지막 글자를 가공하고 리스트에 넣는게 효율적이라고 생각 함
+    b = a[0] + a[-1]
+    string_grupe.append(b) 
+
+print(*string_grupe, sep='\n')
+'''
+# 11654
+'''print(ord(input()))#키보드로 입력 받은 것을 출력해라. ord(입력) ==  키보드 입력한 문자 -> 아스키 번호
+'''
+
+#11720
+
+'''N = int(input())
+int_num = int(input())
+list_num = list(map(int,str(int_num)))
+print(sum(list_num))
+
+'''
+
+#10809  문자열로 for문 if문 둘다 돌릴 수 있는거 
+'''
+S = input()
+abc ='abcdefghijklmnopqrstuvwxyz'
+
+for i in abc:
+    if i in S:
+        print(S.index(i), end= ' ')
+        
+    else:
+        print(-1,end= ' ')
+'''
+#2675
+'''
+N = int(input())
+
+for x in range(N):
+    R, S = input().split()
+    for i in range(len(S)):
+        print(int(R) * S[i],end='')
+    print()
+'''
+
+#1152
+
+'''string = input().split()
+print(len(string))
+'''
+#2908 
+
+'''A, B = input().split()
+A = int(A[::-1])
+B = int(B[::-1])
+if A>=B:
+    print(A)
+else:
+    print(B) 
+'''
+#5622 다시 풀어야 되는 문제
+'''
+dial = ['ABC', 'DEF', 'GHI', 'JKL', 'MNO', 'PQRS', 'TUV', 'WXYZ']
+a = input()
+ret = 0
+for j in range(len(a)):
+    for i in dial:
+        if a[j] in i:
+            ret += dial.index(i)+3
+print(ret)
+
+'''
+
+while True :
+    try :
+        print(input())
+    except EOFError:
+        break
+
