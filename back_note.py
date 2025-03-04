@@ -729,9 +729,32 @@ print(ret)
 
 '''
 
-while True :
+'''while True :
     try :
         print(input())
     except EOFError:
         break
+'''
 
+
+'''
+full_set = [1,1,2,2,2,8]
+find_obj = list(map(int,input().split()))
+
+print(find_obj)
+
+print(*list(i-x for i,x in zip(full_set,find_obj)))
+
+
+#for i, x in zip(full_set,find_obj):
+    #print(i,x,i-x)
+'''
+N = int(input())
+centet_num = N*2-1
+for x in range(N):
+    result = ('*' *(x*2+1)).center(centet_num)
+    print(result)
+    #result.centet(centet_num)
+for x in range(1,N,-1):
+    result = ('*'*((x-1)*2-1))
+    print(result)
