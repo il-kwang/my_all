@@ -104,7 +104,7 @@ if warn in warn_investment_list:
 else:
     print("투자 경고 종목이 아닙니다.")
 
-'''
+
 #119
 fruit = {"봄" : "딸기", "여름" : "토마토", "가을" : "사과"}
 
@@ -114,9 +114,10 @@ if choice_119 in fruit:
 else:
     print("오답입니다.")
 
-
+#120
 choice_120= input("제가 좋아하는 과일은?")
 if choice_120 in fruit.values():
     print("정답입니다.")
 else:
     print("오답입니다.")
+'''    
