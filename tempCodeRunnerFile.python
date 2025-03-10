@@ -1,2 +1,0 @@
-url = "http://sharebook.kr"
-print(url.find("kr"))
