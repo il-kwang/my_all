@@ -121,3 +121,48 @@ if choice_120 in fruit.values():
 else:
     print("오답입니다.")
 '''    
+'''
+#121
+input121 =input('알파벳을 입력해주세요.')
+if input121.islower(): #소문자일 떄 True
+    print(input121.upper()) #대문자로 바꾼다.
+else:
+    print(input121)
+'''
+
+'''#122
+score = int(input("score :"))#int형 으로 입력 받기
+
+if 81 <= score <= 100:
+    print("grade is A")
+elif 61 <= score <= 80:
+    print('grade is B')
+elif 41 <= score <= 60:
+    print('grade is C')
+elif 21 <= score <= 40:
+    print('grade is D')
+else:
+    print('grade is E')'''
+'''
+#123
+input123money, input123 = float(input("입력: ")) , input() 
+print(input123money, input123)
+
+if input123 == "달러":
+    input123money *= 1167
+elif input123 == "엔":
+    input123money *= 1.096
+elif input123 == "유로":
+    input123money *= 1268
+elif input123 == "위안":
+    input123money *= 171
+else:
+    print("지원하지 않는 화폐입니다.")
+print(input123money, "원")
+'''
+#124
+number1 = int(input('input1: '))
+number2 = int(input('input2: '))
+number3 = int(input('input3: '))
+
+print(max(number1,number2,number3))
