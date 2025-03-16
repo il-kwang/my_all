@@ -160,9 +160,31 @@ else:
     print("지원하지 않는 화폐입니다.")
 print(input123money, "원")
 '''
-#124
+'''#124
 number1 = int(input('input1: '))
 number2 = int(input('input2: '))
 number3 = int(input('input3: '))
 
-print(max(number1,number2,number3))
+print(max(number1,number2,number3))'''
+
+'''#125
+input125 = input('휴대전화 번호 입력:')
+if input125[0:3] == 011:
+    print('당신은 SKT 사용자입니다.')
+elif input125[0:3] == 016:
+    print('당신은 KT 사용자입니다.')
+elif input125[0:3] == 019:
+    print('당신은 LGU 사용자입니다.')
+else:
+    print('알 수 없습니다.')
+
+'''
+'''#126
+post_number = input('우편번호 : ')
+if post_number[2] == 0 or post_number[2] == 1 or post_number[2] ==2:
+    print('강북구')
+elif post_number[2] == 3 or post_number[2] == 4 or post_number[2] == 5:
+    print('도봉구')
+elif post_number[2] == 6 or post_number[2] == 7 or  post_number[2] == 8 or post_number[2] == 9:
+    print('노원구')
+    '''
