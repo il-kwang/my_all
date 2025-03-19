@@ -207,8 +207,8 @@ if input128[8] == '0':
 else:
     print('서울이 아닙니다.')
     
-#129'''
-
+'''
+'''#129
 input129 = input('입력 :')
 #821010 - 1635210
 inta1 = int (input129[0]) * 2  #16 + 6 + 4 + 0 + 6 + 0 + 8 +54 + 6 +15 + 8 + 5  = 128
@@ -229,5 +229,41 @@ input_sum = inta1 + inta2 + inta3 + inta4 + inta5 + inta6 + inta7 + inta8 + inta
 one_int = input_sum % 11
 print(f"input_sum = {input_sum} / 11의 나머지 = {one_int}")
 print(one_int)
+last_int = 11 - one_int
 
+if last_int == int(input129[-1]):
+    print('유효하는 주민등록번호 입니다.')
+else:
+    print('유효하지 않은 주민등록번호입니다.')
 
+'''
+
+'''#130
+import requests
+btc = requests.get("https://api.bithumb.com/public/ticker/").json()['data']
+
+변동폭 = float(btc['max_price']) - float(btc['min_price'])
+시가 = float(btc['opening_price'])
+최고가 = float(btc['max_price'])
+
+if (시가+변동폭) > 최고가:
+    print("상승장")
+else:
+    print("하락장")'''
+    
+#131
+과일 = ['사과','귤','수박']
+for i in 과일:
+    print(i)
+
+#132
+for k in 과일:
+    print("#####")
+    
+#133
+for i in ["A","B","C"]:
+    print(i)
+
+#134
+for i in ["A","B","C"]:
+    print("출력:", i)
