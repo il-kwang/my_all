@@ -209,5 +209,25 @@ else:
     
 #129'''
 
+input129 = input('입력 :')
+#821010 - 1635210
+inta1 = int (input129[0]) * 2  #16 + 6 + 4 + 0 + 6 + 0 + 8 +54 + 6 +15 + 8 + 5  = 128
+inta2 = int (input129[1]) * 3
+inta3 = int (input129[2]) * 4
+inta4 = int (input129[3]) * 5
+inta5 = int (input129[4]) * 6
+inta6 = int (input129[5]) * 7
+inta7 = int (input129[7]) * 8
+inta8 = int (input129[8]) * 9
+inta9 = int (input129[9]) * 2
+inta10 = int (input129[10]) * 3
+inta11 = int (input129[11]) * 4
+inta12 = int (input129[12]) * 5
+print(input129)
+
+input_sum = inta1 + inta2 + inta3 + inta4 + inta5 + inta6 + inta7 + inta8 + inta9 + inta10 + inta11 + inta12
+one_int = input_sum % 11
+print(f"input_sum = {input_sum} / 11의 나머지 = {one_int}")
+print(one_int)
 
 
