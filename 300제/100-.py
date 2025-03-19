@@ -188,3 +188,26 @@ elif post_number[2] == 3 or post_number[2] == 4 or post_number[2] == 5:
 elif post_number[2] == 6 or post_number[2] == 7 or  post_number[2] == 8 or post_number[2] == 9:
     print('노원구')
     '''
+'''#127
+input127 = input('입력 : ')
+if input127[7] == '1' or input127[7] =='3':
+    print('남자')
+elif input127[7] == '2' or input127[7] =='4':
+    print('여자')
+else:
+    print('알 수 없습니다.')'''
+'''#128
+input128 = input('입력 :')
+
+if input128[8] == '0':
+    if input128[9] == '9':
+        print('서울이 아닙니다.')
+    else:
+        print("서울 입니다.") 
+else:
+    print('서울이 아닙니다.')
+    
+#129'''
+
+
+
