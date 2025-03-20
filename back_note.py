@@ -758,3 +758,4 @@ for x in range(N):
 for x in range(1,N,-1):
     result = ('*'*((x-1)*2-1))
     print(result)
+    
