@@ -50,5 +50,5 @@ try:
 
 finally:
     time.sleep(2)
-    driver.quit()  # 브라우저 종료
+    #driver.quit()  # 브라우저 종료
     print("드라이버를 종료합니다.")
